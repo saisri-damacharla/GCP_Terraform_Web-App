@@ -1,7 +1,7 @@
 # Define the GCP provider configuration.
 provider "google" {
-  project = "gcptfdemo1"  # Replace with your GCP project ID
-  region  = "us-central1"          # Replace with your desired GCP region
+  project = "gcptfdemo1"  
+  region  = "us-central1"          
 }
 
 variable "cidr" {
@@ -39,7 +39,7 @@ resource "google_compute_instance" "server" {
 
   boot_disk {
     initialize_params {
-      image = "debian-11-bullseye-v20250123"  # Replace with your desired image
+      image = "debian-11-bullseye-v20250123"  
     }
   }
 
@@ -52,7 +52,7 @@ resource "google_compute_instance" "server" {
   }
 
   metadata = {
-    ssh-keys = "tfdemo1:${file("C:/Users/saida/.ssh/id_rsa.pub")}"  # Replace with the path to your public key file
+    ssh-keys = "tfdemo1:${file("C:/Users/saida/.ssh/id_rsa.pub")}"  
   }
 
   tags = ["web"]
