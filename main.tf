@@ -1,4 +1,4 @@
-# Define the GCP provider configuration.
+
 provider "google" {
   project = "gcptfdemo1"  
   region  = "us-central1"          
